@@ -1,0 +1,41 @@
+%!TEX TS-program = latexmk
+%!TEX encoding = UTF-8 Unicode
+
+% documentclass options:
+\documentclass[11pt, a4paper, parskip=half, BCOR=10mm, spanish, oneside]{scrbook}
+
+% include all packages and define commands in setup.tex
+\input{config/setup}
+% include personal information
+\input{config/personalize}
+
+\begin{document}
+
+\pagestyle{empty}
+\hypersetup{pageanchor=false}
+\input{frontmatter/titlepage}
+\pagestyle{empty}
+\frontmatter
+%\input{frontmatter/abstract}
+\tableofcontents
+\listoffigures
+%\listoftables
+\hypersetup{pageanchor=true}  % re-enable hyperlinking
+
+% include each chapter...
+\mainmatter
+\include{chapters/chapterA}
+\include{chapters/chapterB}
+\include{chapters/chapterC}
+\include{chapters/chapterD}
+\include{chapters/conclusions}
+
+% uncomment if citation and bibliography was used
+\bibliographystyle{ieeetr}
+\bibliography{bib/uni}
+\addcontentsline{toc}{chapter}{Bibliography}
+\newpage
+\thispagestyle{empty}
+% \mbox{}
+
+\end{document}

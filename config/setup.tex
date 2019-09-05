@@ -1,0 +1,98 @@
+%!TEX root = ../informe.tex
+
+% ----------- package includes -----------------------
+% ----------------------------------------------------
+    \usepackage[T1]{fontenc}  % 8-bit fonts
+    \usepackage[utf8]{inputenc}
+    \usepackage{scrhack}
+    \usepackage{palatino} % great looking font
+    
+    \usepackage[spanish]{babel}
+    \usepackage{titling}
+
+    % -------------- default settings ----------------
+    % adjust the style of float's captions, separated from text to improve readabilty
+    \usepackage[labelfont=bf, labelsep=colon, format=hang, textfont=singlespacing]{caption}
+    \usepackage{chngcntr}  % continuous numbering of figures/tables over chapters
+    
+    \counterwithout{equation}{chapter}
+    \counterwithout{figure}{chapter}
+    \counterwithout{table}{chapter}
+
+    % chapter title, section, subsection formatting
+    \setkomafont{chapter}{\normalfont\bfseries\huge}
+    \setkomafont{section}{\normalfont\bfseries\Large}
+    \setkomafont{subsection}{\normalfont\bfseries\large}
+    
+    \renewcommand*{\chapterformat}{
+        \textcolor{UTNRed}{\thechapter}\enskip
+    }
+    
+    % ToC fonts
+    \usepackage{titletoc}
+    \titlecontents{chapter}[0em]{\normalfont\bfseries}{
+    \thecontentslabel\enspace}
+    {\hspace{1.05em}}
+    {\hfill\contentspage}[\vskip 6pt]
+
+    % Line spacing
+    \usepackage{setspace}
+    \onehalfspacing
+    \renewcommand{\baselinestretch}{1.5} 
+
+    % ------------------- functional packages -------------------
+    \usepackage[dvipsnames]{xcolor}  % more colors
+    \usepackage{graphicx}  % include graphics
+    \usepackage{subfig}  % divide figure, e.g. 1(a), 1(b)...
+    \usepackage{amsmath, amsthm, amsfonts} % Math related
+    \usepackage{calc}  % calculate within LaTeX
+    \usepackage[unicode=true,bookmarks=true,bookmarksnumbered=true,
+                bookmarksopen=true,bookmarksopenlevel=1,breaklinks=false,
+                pdfborder={0 0 0},backref=false,colorlinks=false]{hyperref}
+
+    % ------------------- Other packages -------------------
+
+    % Improves general appearance of the text
+    \usepackage[protrusion=true,expansion=true, kerning]{microtype}
+    
+    % For nicer looking tables
+    \usepackage{booktabs}
+
+% ------------- Other settings -----------------------
+% ----------------------------------------------------
+    % ----------------- referencing ----------------
+    \newcommand{\secref}[1]{Section~\ref{#1}}
+    \newcommand{\chapref}[1]{Chapter~\ref{#1}}
+    \renewcommand{\eqref}[1]{Equation~(\ref{#1})}
+    \newcommand{\figref}[1]{Figure~\ref{#1}}
+    \newcommand{\tabref}[1]{Table~\ref{#1}}
+
+    % ------------------- layout ------------------------
+    % prevents floating objects from being placed ahead of their section
+    
+    \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+    \let\mySubSection\subsection\renewcommand{\subsection}{\suppressfloats[t]\mySubSection}
+
+    % Custom colour
+    \definecolor{UTNRed}{RGB}{160, 14, 50}
+    
+    % --------- math formatting commands ----------------
+    % define vectors to be bold instead of using an arrow
+    \renewcommand{\vec}[1]{\mathbf{#1}}
+    \newcommand{\mat}[1]{\mathbf{#1}}
+    % tag equation with name
+    \newcommand{\eqname}[1]{\tag*{#1}}
+	
+	% ------------- Translations -------------------------
+	% Use "Contenido" instead of "Content" in ToC
+    \addto\captionsspanish{
+        \renewcommand{\contentsname}%
+        {Contenido}%
+    }
+
+    % Use "Figura" instead of "Figure"
+    \addto\captionsspanish{
+        \renewcommand{\listfigurename}%
+        {Figuras}%
+    }
+
