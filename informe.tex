@@ -1,29 +1,41 @@
+% Report-Essay Template
+% Template version used: v0.1
+% https://github.com/rnsavinelli/report-essay-template
+%
 %!TEX TS-program = latexmk
 %!TEX encoding = UTF-8 Unicode
 
-% documentclass options:
+% Documentclass options:
 \documentclass[11pt, a4paper, parskip=half, BCOR=10mm, spanish, oneside]{scrbook}
 
-% include all packages and define commands in setup.tex
+% Include all packages and define commands in setup.tex
 \input{config/setup}
-% include personal information
+
+% Include personal information
 \input{config/personalize}
 
 \begin{document}
 
+% No header and no page number
 \pagestyle{empty}
+% Disable hyperlinking
 \hypersetup{pageanchor=false}
+
 \input{frontmatter/titlepage}
+
+% Simple layout
 \pagestyle{plain}
 \frontmatter
 %\input{frontmatter/abstract}
 \tableofcontents
 \listoffigures
 %\listoftables
-\hypersetup{pageanchor=true}  % re-enable hyperlinking
+% Re-enable hyperlinking
+\hypersetup{pageanchor=true}
 
-% include each chapter...
 \mainmatter
+% Main body of the document
+% Include each and every chapter...
 \include{chapters/chapterA}
 \include{chapters/chapterB}
 \include{chapters/chapterC}
@@ -38,6 +50,6 @@
 % adds an empty page at the end if required
 %\newpage
 %\thispagestyle{empty}
-% \mbox{}
+%\mbox{}
 
 \end{document}

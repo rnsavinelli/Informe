@@ -1,4 +1,4 @@
-# Lab report and Essay template
+# Report-Essay template
 
 **English:**
 
