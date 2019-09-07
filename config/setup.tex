@@ -21,10 +21,13 @@
 \setkomafont{chapter}{\normalfont\bfseries\huge}
 \setkomafont{section}{\normalfont\bfseries\Large}
 \setkomafont{subsection}{\normalfont\bfseries\large}
-    
+
 % Continuous numbering of figures/tables over chapters
 \usepackage{chngcntr}
-    
+
+% Adjust the style of float's captions, separated from text to improve readabilty
+\usepackage[labelfont=bf, labelsep=colon, format=hang, textfont=singlespacing]{caption}
+
 \counterwithout{equation}{chapter}
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
