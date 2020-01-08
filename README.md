@@ -3,7 +3,7 @@
 **English:**
 
 Template designed with the objective of offering a simple and organized base on which to write not only lab reports,
-but written assignments or essays at UTN (Universidad Tecnológica Nacional).
+but written assignments or essays for UTN (Universidad Tecnológica Nacional).
 
 Note that this does not mean that this is an official template. It's more of a personal project or ambition.
 
