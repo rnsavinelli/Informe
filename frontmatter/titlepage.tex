@@ -5,9 +5,12 @@
 
 \begin{titlepage}
 
-\vspace*{2.2cm}
-\huge{\textcolor{MainColour}{\bfseries{\thetitle}}} \\ [0.4cm]
-\Large{\thesubtitle} \\ [2.6cm]
+\vspace*{2.5cm}
+\huge{\textcolor{MainColour}{\bfseries{\thetitle}}}
+\vspace*{0.5cm}
+
+\Large{\thesubtitle}
+\vspace*{2.5cm}
 
 \begin{description}
 \onehalfspacing
@@ -27,13 +30,16 @@
 \vfill
 
 \begin{flushright}
+\onehalfspacing
 \large {
-    \university \\
+    \university
     % If region has been defined prints it in the titlepage
+    
     \ifdef{\region}{
-        \region \\
+        \region
     } {}
-    \department \\
+    
+    \department
 }
 \end{flushright}
 
